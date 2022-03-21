@@ -1,4 +1,4 @@
-﻿@model Shopping.Entities.Country
+﻿@model Shopping.Entities.Category
 
 @{
     ViewData["Title"] = "Create";
@@ -6,7 +6,7 @@
 
 <h1>Crear</h1>
 
-<h4>País</h4>
+<h4>Categpría</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,10 +14,11 @@
 
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <partial name="_country"/>
+            <partial name="_category"/>
 
             <div class="form-group mt-2">
                 <input type="submit" value="Crear" class="btn btn-primary" />
+               
                 <a asp-action="Index"class="btn btn-success">Regresar</a>
             </div>
         </form>
@@ -31,3 +32,4 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
